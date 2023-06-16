@@ -47,33 +47,35 @@
 				<div class="content">
 					<h2>Bug Report Example</h2>
 					<h4>QA TESTING</h4>
-					<p>
+					<p>						
 						This is an individual exercise where I explore my knowledge of a bug report.
 						We can see an example of a template that can be used to submit an issue.
-					</p>
-					<div class="image">
-						<img id="mi-imagen" src="images/bug_template/bug_template.png" alt="" />
-					</div>
-					<script>
-						// Obtén una referencia a la imagen
-						const imagen = document.getElementById('mi-imagen');
+					</p>					
+				</div>
+				<div class="image">
+					<img src="images/bug_template/bug_template.png" alt="" onclick="toggleImage(this)" style="width: 100%;" />
+				</div>
+				<script>
+					function toggleImage(image) {
+						image.parentElement.classList.toggle('image-expanded');
+						if (image.style.width === '100%') {
+							image.style.width = '200%';
+						} else {
+							image.style.width = '100%';
+						}
+					}
+					function highlightImage(image) {
+						image.style.backgroundColor = 'lightgray';
+					}
 
-						// Agrega un evento de clic a la imagen
-						imagen.addEventListener('click', function() {
-							// Verifica si la imagen ya está en modo de visualización ampliada
-							if (imagen.classList.contains('ampliada')) {
-								// Si está ampliada, remueve la clase y restaura el estilo original
-								imagen.classList.remove('ampliada');
-								imagen.style.zIndex = '';
-							} else {
-								// Si no está ampliada, agrega la clase y establece el estilo para mostrarla en el centro de la pantalla
-								imagen.classList.add('ampliada');
-								imagen.style.zIndex = '9999';
-							}
-						});
-					</script>
+					function unhighlightImage(image) {
+						image.style.backgroundColor = '';
+					}
+				</script>
+
+
 			</section>
-
+			
 			<!-- Three -->
 			<section class="spotlight style1 orient-left content-align-left image-position-right onscroll-image-fade-in">
 				<div class="content">

@@ -8612,12 +8612,3 @@ input, select, textarea {
 		margin-left: 1%;
 		margin-bottom: 1%;
 	}
-
-	.ampliada {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		max-width: 100%;
-		max-height: 100%;
-	}
