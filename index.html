@@ -44,27 +44,41 @@
 
 			<!-- Two -->
 			<section class="spotlight style1 orient-right content-align-left image-position-right onscroll-image-fade-in">
+				<style>
+					.spotlight.image-expanded {
+						height: auto;
+					}
+				</style>
+
 				<div class="content">
 					<h2>Bug Report Example</h2>
 					<h4>QA TESTING</h4>
-					<p>						
+					<p>
 						This is an individual exercise where I explore my knowledge of a bug report.
 						We can see an example of a template that can be used to submit an issue.
-					</p>					
+					</p>
 				</div>
 				<div class="image">
-					<img src="images/bug_template/bug_template.png" alt="" onclick="toggleImage(this)" style="width: 100%;" />
+					<img src="images/bug_template/bug_template.png" alt="" onclick="toggleImage(this)" onmouseover="highlightImage(this)" onmouseout="unhighlightImage(this)" style="width: 100%;" />
 				</div>
 				<script>
 					function toggleImage(image) {
+						image.parentElement.classList.toggle('image-expanded');
 						if (image.style.width === '100%') {
 							image.style.width = '200%';
 						} else {
 							image.style.width = '100%';
 						}
 					}
-				</script>
 
+					function highlightImage(image) {
+						image.style.backgroundColor = 'lightgray';
+					}
+
+					function unhighlightImage(image) {
+						image.style.backgroundColor = '';
+					}
+				</script>
 			</section>
 			
 			<!-- Three -->
