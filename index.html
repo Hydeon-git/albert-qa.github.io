@@ -50,14 +50,21 @@
 					<p>						
 						This is an individual exercise where I explore my knowledge of a bug report.
 						We can see an example of a template that can be used to submit an issue.
-					</p>
-					<ul class="actions stacked">
-						<li><a href="fortnite_lvl.html" class="button">Show Project</a></li>
-					</ul>
+					</p>					
 				</div>
 				<div class="image">
-					<img src="images/fortnite_map/fort1.png" alt="" />
-				</div>				
+					<img src="images/bug_template/bug_template.png" alt="" onclick="toggleImage(this)" style="width: 100%;" />
+				</div>
+				<script>
+					function toggleImage(image) {
+						if (image.style.width === '100%') {
+							image.style.width = '200%';
+						} else {
+							image.style.width = '100%';
+						}
+					}
+				</script>
+
 			</section>
 			
 			<!-- Three -->
